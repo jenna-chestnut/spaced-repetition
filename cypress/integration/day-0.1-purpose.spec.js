@@ -11,11 +11,11 @@ describe(`User story: Application name and purpose`, function() {
   it('has h1 with title', () => {
     cy.visit('/')
     cy.get('header h1')
-      .should('contain', 'Spaced repetition')
+      .should('contain', 'Ehl')
       .get('p')
       .should(
         'have.text',
-        'Practice learning a language with the spaced repetition revision technique.'
+        'Enhanced Human Learning. Practice learning a language with the spaced repetition revision technique.'
       )
   })
 })

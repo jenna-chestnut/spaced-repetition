@@ -1,0 +1,17 @@
+.dash-header {
+  margin: 0px;
+}
+
+.dashboard .group h2 {
+  margin-bottom: 5px;
+}
+
+.b-g {
+  display: flex;
+  align-content: center;
+}
+
+.b-g button, .b-g a {
+  align-self: center;
+  margin: auto;
+}
