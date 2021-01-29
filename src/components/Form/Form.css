@@ -14,8 +14,7 @@ fieldset {
 }
 
 input {
-  margin: 20px auto;
-  margin-left: 15px;
+  margin: 5px auto;
   width: 100%;
 }
 
@@ -27,7 +26,8 @@ form button {
 
 form label {
   display: inline-block;
-  text-align: right;
+  padding-top: 15px;
+  text-align: center;
   height: 30px;
   width: 150px;
   margin: auto 5px;
@@ -42,13 +42,17 @@ form a {
   margin-left: 10px;
 }
 
-
-
 @media all and (min-width: 600px) {
   form {
       width: 50%;
   }
   form input {
       width: 50%;
+      margin: 20px auto;
+      margin-left: 15px;
+  }
+  form label {
+    padding-top: 0px;
+    text-align: right;
   }
 }

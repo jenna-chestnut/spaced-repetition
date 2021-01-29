@@ -1,10 +1,15 @@
 header {
   position: relative;
-  background-color: #e6f3f3c0;
+  background-color: #cbdcec;
 }
 
 header h1 a, header h1 a:hover {
   transition: none;
+}
+
+header h1 {
+  align-self: flex-start;
+  text-align: left;
 }
 
 header img {
@@ -19,10 +24,10 @@ header span {
 
 h1 {
   padding: 15px;
-  font-size: 35px;
+  font-size: 55px;
   letter-spacing: 2px;
-  margin: auto;
-  margin-top: 65px;
+  margin-bottom: auto;
+  margin-top: 45px;
 }
 
 nav, .logged-in-nav {
@@ -62,7 +67,6 @@ nav a {
       padding: 0 3%;
   }
   h1 {
-      text-align: left;
       padding-top: 0px;
       font-size: 45px;
       margin-top: 25px;

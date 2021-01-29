@@ -1,0 +1,18 @@
+.answer {
+  margin-bottom: 20px;
+}
+
+.a-s {
+  flex-direction: column;
+  padding: 55px 0px;
+}
+
+.a-v {
+  flex-direction: column;
+}
+
+@media all and (min-width: 800px) {
+  .a-v {
+    flex-direction: row;
+  }
+}

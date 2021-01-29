@@ -13,6 +13,7 @@ main {
 
 .group {
   display: flex;
+  flex-direction: column;
 }
 
 .item {
@@ -34,7 +35,7 @@ a {
 }
 
 a:hover {
-  color: #2c534d;
+  color: #4c2c53;
   text-shadow: 2px 2px 4px #00000048;
   transition: 1s;
   letter-spacing: 2px;
@@ -53,9 +54,9 @@ main .error a {
 }
 
 button {
-  color: #252b31;
   letter-spacing: 2px;
-  background-color: #b2dfe0;
+  background-color:  #5e112f;
+  color: #ffffff;
   border: none;
   padding: 10px;
   border-radius: 10px;
@@ -64,7 +65,17 @@ button {
 
 button:hover {
   border: none;
-  background-color: #163b5a;
-  color: #ffffff;
+  color: #252b31;
+  background-color: #ffbede;
   transition: 1s;
+}
+
+p {
+  font-size: 18px;
+}
+
+@media all and (min-width:800px) {
+  .group {
+    flex-direction: row;
+  }
 }

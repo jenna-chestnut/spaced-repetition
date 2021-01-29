@@ -1,31 +1,55 @@
 .word-list h3 {
-  background-color: rgb(57, 69, 82);
+  background-color: #394552;
   color: white;
-  padding: 15px;
+  padding: 35px 0px;
   font-weight: normal;
   font-size: 25px;
-  margin-top: 5px;
+  margin-top: 20px;
 }
 
 .word-list li h4 {
+  flex: 1;
   text-align: left;
   display: inline;
-  margin: 25px;
+  align-self: center;
+  font-size: 20px;
+  margin: 20px 10px;
 }
 
 .word-list li {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: 15px;
+  background-color: #cbdcec50;
   list-style-type: none;
   margin: 15px;
+  min-height: 50px;
+  padding: 15px;
 }
 
 li span {
-  float: right;
-  margin: 5px;
+  margin: auto 10px;
+  text-align: center;
 }
 
 ul {
   text-align: left;
-  width: 60%;
   margin: auto;
   padding-left: 0;
+}
+
+@media all and (min-width:800px) {
+  ul {
+    width: 60%;
+  }
+  .word-list li {
+    flex-direction: row;
+  }
+  .word-list h3 {
+    margin-top: 5px;
+  }
+  li span {
+    text-align: right;
+  }
 }
