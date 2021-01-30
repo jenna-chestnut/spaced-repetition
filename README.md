@@ -1,6 +1,6 @@
 # Ehl - Spaced Repetition
 
-[Live app]()
+[Live app](https://spaced-repetition-denim.vercel.app/)
 
 [Server-side repo](https://github.com/jenna-chestnut/spaced-repetition-api)
 
