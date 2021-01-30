@@ -22,7 +22,9 @@ class RegistrationRoute extends Component {
           <br/>
           Practice learning a language with the spaced repetition revision technique.
         </p>
+        <hr/>
         <h2>Sign up</h2>
+        <hr/>
         <RegistrationForm
           onRegistrationSuccess={this.handleRegistrationSuccess}
         />
