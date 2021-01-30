@@ -11,7 +11,22 @@
   align-content: center;
 }
 
-.b-g button, .b-g a {
+.s-b-p a {
+  font-weight: normal;
+  letter-spacing: 2px;
+  background-color:  #5e112f;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 1s;
   align-self: center;
   margin: auto;
+}
+
+.s-b-p a:hover {
+  border: none;
+  color: #252b31;
+  background-color: #ffbede;
+  transition: 1s;
 }

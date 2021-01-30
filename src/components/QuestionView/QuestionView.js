@@ -7,12 +7,18 @@ class QuestionView extends Component {
   static contextType = UserContext
 
   render() {
-    let language = this.context.words.language ? 
-    this.context.words.language.name : 'Language';
-    let score = this.context.words.language ? 
-    this.context.words.language.total_score : 0;
-    let head = this.context.head ?
-    this.context.head : {};
+    let language = this.context.words.language 
+    ? this.context.words.language.name : 'Language';
+
+    let score = this.context.answer.totalScore 
+    ? this.context.answer.totalScore
+    : this.context.words.language 
+    ? this.context.words.language.total_score 
+    : 0;
+
+    console.log(this.context)
+    let head = this.context.head 
+    ? this.context.head : {};
 
     return (<>
     <div className='group'>

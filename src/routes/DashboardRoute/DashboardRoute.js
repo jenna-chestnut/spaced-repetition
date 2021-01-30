@@ -37,8 +37,8 @@ class DashboardRoute extends Component {
             <p>Total correct answers: {score}</p>
             </div>
 
-          <div className='b-g item'>
-            <Link to='/learn'><button>Start practicing!</button></Link>
+          <div className='b-g s-b-p item'>
+            <Link to='/learn'>Start practicing!</Link>
             </div>
 
         </div>

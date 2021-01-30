@@ -38,9 +38,7 @@ class AnswerView extends Component {
   }
 
   render() {
-    let { isCorrect = 'false', wordCorrectCount, wordIncorrectCount, answer } = this.context.answer;
-    let score = this.context.words.language ? 
-    this.context.words.language.total_score : 0;
+    let { isCorrect = 'false', wordCorrectCount, wordIncorrectCount, answer, totalScore } = this.context.answer;
 
     return (<>
     <div className='group a-v'>
@@ -48,7 +46,7 @@ class AnswerView extends Component {
            {this.renderCorrect(isCorrect)}
 
           <div className='item a-s'>
-          <p>Total correct answers: {score}</p>
+          <p>Total correct answers: {totalScore}</p>
           <p><b>Scores for {answer}: </b></p>
           <p>{wordCorrectCount} correct {' | '} 
           {wordIncorrectCount} incorrect</p>
