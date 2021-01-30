@@ -13,18 +13,16 @@ class LearningRoute extends Component {
 	componentDidMount() {
 		this.context.clearError();
 
-    LanguageApiService.getWords()
-    .then(this.context.setWords)
-    .catch(this.context.setError);
-
     LanguageApiService.getHead()
     .then(this.context.setHead)
     .catch(this.context.setError);
   }
 
   onAnswer = () => {
-    console.log(this.context.answer)
-    this.setState({ answer : true });
+    LanguageApiService.getHead()
+    .then(this.context.setHead)
+    .then(() => this.setState({ answer : true }))
+    .catch(this.context.setError);
   }
 
   onNext = () => {

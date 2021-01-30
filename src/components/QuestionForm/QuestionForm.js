@@ -47,12 +47,12 @@ class QuestionForm extends Component {
           {error && <p>{error}</p>}
         </div>
         <div className='l-p'>
-          <Label htmlFor='guess-input'>
-            Guess
+          <Label htmlFor='learn-guess-input'>
+            Guess:
           </Label>
           <Input
             ref={this.firstInput}
-            id='guess-input'
+            id='learn-guess-input'
             name='guess'
             required
           />

@@ -19,7 +19,7 @@ class AnswerView extends Component {
     return (
       <>
       <div className='item'>
-      <h2>You are {isC}</h2>
+      <h2 className='Results'>You are {isC}</h2>
       </div>
       <div className='item'>
       <img src={img} alt='Cat' />
@@ -32,7 +32,7 @@ class AnswerView extends Component {
     let { answer } = this.context;
     let word = isC ? answer.nextWord : answer.answer;
     let p = isC ? 'Next word: ' : 'Correct answer: '
-    return <p className='bgr'>{p} 
+    return <p className='bgr DisplayFeedback'>{p} 
     <span className='to-translate'>{word || 'word'}</span>
     </p>
   }
@@ -46,7 +46,7 @@ class AnswerView extends Component {
            {this.renderCorrect(isCorrect)}
 
           <div className='item a-s'>
-          <p>Total correct answers: {totalScore}</p>
+          <p className='DisplayScore'>Total correct answers: {totalScore}</p>
           <p><b>Scores for {answer}: </b></p>
           <p>{wordCorrectCount} correct {' | '} 
           {wordIncorrectCount} incorrect</p>

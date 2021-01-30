@@ -1,10 +1,20 @@
 import React, { Component } from 'react'
 import UserContext from '../../contexts/UserContext'
+import LanguageApiService from '../../services/language-api-service';
 import QuestionForm from '../QuestionForm/QuestionForm'
 import './QuestionView.css'
 
 class QuestionView extends Component {
-  static contextType = UserContext
+  static contextType = UserContext;
+
+  
+  componentDidMount() {
+    this.context.clearError();
+    
+    LanguageApiService.getWords()
+    .then(this.context.setWords)
+    .catch(this.context.setError);
+  }
 
   render() {
     let language = this.context.words.language 
@@ -12,9 +22,15 @@ class QuestionView extends Component {
 
     let score = this.context.answer.totalScore 
     ? this.context.answer.totalScore
-    : this.context.words.language 
-    ? this.context.words.language.total_score 
+    : this.context.head.totalScore 
+    ? this.context.head.totalScore 
     : 0;
+
+    let nextWord = this.context.answer.nextWord 
+    ? this.context.answer.nextWord
+    : this.context.head.nextWord 
+    ? this.context.head.nextWord 
+    : 'Next Word';
 
     console.log(this.context)
     let head = this.context.head 
@@ -32,8 +48,8 @@ class QuestionView extends Component {
 
         <div className='d-bg question'>
           <p className='bgr'>Translate the word: 
-          <span className='to-translate'>{head.nextWord}</span>
           </p>
+          <span className='to-translate '>{nextWord}</span>
           <hr/>
           <span>Current scores: {head.wordCorrectCount} correct {' | '} 
           {head.wordIncorrectCount} incorrect</span>
