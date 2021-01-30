@@ -1,4 +1,4 @@
-# Ehl - Spaced Repetition Client
+# Ehl - Spaced Repetition
 
 [Live app]()
 
