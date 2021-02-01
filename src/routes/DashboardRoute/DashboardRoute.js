@@ -23,8 +23,6 @@ class DashboardRoute extends Component {
     let score = this.context.words.language ? 
     this.context.words.language.total_score : 0
 
-    console.log(this.context.words);
-
     return (
       <section className='dashboard'>
         <h2 className='dash-header'>Dashboard</h2>

@@ -32,7 +32,6 @@ class QuestionView extends Component {
     ? this.context.head.nextWord 
     : 'Next Word';
 
-    console.log(this.context)
     let head = this.context.head 
     ? this.context.head : {};
 

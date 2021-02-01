@@ -20,7 +20,6 @@ class WordList extends Component {
 
   render() {
     let { words } = this.context;
-    console.log(words.words)
     return (
     <div className='word-list'>
     <h3>Words to practice:</h3>
